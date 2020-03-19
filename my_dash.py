@@ -13,7 +13,7 @@ new_time = old_time - datetime.timedelta(hours=2, minutes=10)
 print(new_time)
 
 #Read data from Google Doc
-df = pd.read_csv('https://raw.githubusercontent.com/desmalley/cuddly-garbanzo/master/dnd_data.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/dyllbert/DungeonsAndDash/master/charSheetData.csv')
 rangebits= 'Form Responses 1!1:4'
 df2=pd.DataFrame(goog.sheetinfo(rangebits))
 names=df2[1]
@@ -67,38 +67,38 @@ app.layout = html.Div(style={
 'background-size': 'cover'
 
 }, children=[
-        html.H4(children='Stats'),
-    generate_table(df2),
+        html.H4(children='People Info'),
+    generate_table(df),
     html.H1(
         children='EHL Quest Dashboard', 
         style={
             'textAlign': 'center',
             'color': colors['text']
         }
-    ),
-    html.Div(children='''
-        A web dashboard for EHL quest support.
-    '''),
+    )
+   #html.Div(children='''
+    #    A web dashboard for EHL quest support.
+    #'''),
       
   
     
-    html.Img(src=app.get_asset_url('dylan2.png')),   
+    #html.Img(src=app.get_asset_url('dylan2.png')),   
     
-    html.Div(html.P("___D"+names[2])),
-    dcc.Slider(
-    min=0,
-    max=10,
-    marks={2:'First Milestone',5:'Mid Milestone',8:'Last Milestone', 10:'Writeup Submitted' },
-    value=5,
-        ),
-    html.Img(src=app.get_asset_url('caitlin.png')),
-    html.Div(html.P("___C"+names[3])),
-    dcc.Slider(
-    min=0,
-    max=10,
-    marks={2:'First Milestone',5:'Mid Milestone',8:'Last Milestone', 10:'Writeup Submitted' },
-    value=3,
-        )
+    #html.Div(html.P("___D"+names[2])),
+    #dcc.Slider(
+    #min=0,
+    #max=10,
+    #marks={2:'First Milestone',5:'Mid Milestone',8:'Last Milestone', 10:'Writeup Submitted' },
+    #value=5,
+    #    ),
+    #html.Img(src=app.get_asset_url('caitlin.png')),
+    #html.Div(html.P("___C"+names[3])),
+    #dcc.Slider(
+    #min=0,
+    #max=10,
+    #marks={2:'First Milestone',5:'Mid Milestone',8:'Last Milestone', 10:'Writeup Submitted' },
+    #value=3,
+    #    )
     
 
 ])
