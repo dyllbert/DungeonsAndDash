@@ -10,7 +10,7 @@ import dash_table
 
 #Read data from csv on github
 df = pd.read_csv('https://raw.githubusercontent.com/dyllbert/DungeonsAndDash/master/charSheetData.csv')
-df2 = pd.read_csv('https://raw.githubusercontent.com/dyllbert/DungeonsAndDash/master/peopleDetails.csv')
+df2 = pd.read_csv('https://raw.githubusercontent.com/dyllbert/DungeonsAndDash/master/form.csv')
 
 #Google stuff, not currently using
 #rangebits= 'Form Responses 1!1:4'
@@ -24,7 +24,6 @@ df2 = pd.read_csv('https://raw.githubusercontent.com/dyllbert/DungeonsAndDash/ma
 
 #To activate (dylan):source dashenv/bin/activate after navigating out of the dungeons and dash folder
 #to deactivate: deactivate
-
 
 
 
