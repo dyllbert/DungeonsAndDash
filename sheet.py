@@ -101,7 +101,7 @@ children=
                Input('overview', 'data'),
                Input('overview', 'derived_virtual_row_ids'),
                Input('overview', 'selected_row_ids')])
-def get_active_letter(active_cell, data, row_id, selected):
+def get_active_person(active_cell, data, row_id, selected):
     if not active_cell:
         return df.iloc[0,0]
     if active_cell:
